@@ -1,0 +1,78 @@
+<div class="mt-1 col-to-row">
+  <div class="box-1">
+    <h4>Element Display</h4>
+    <md-radio-group [(ngModel)]="elDisplay">
+      <md-radio-button [value]="Display.Block">
+        display: block
+      </md-radio-button>
+      <md-radio-button [value]="Display.Inline">
+        display: inline
+      </md-radio-button>
+      <md-radio-button [value]="Display.InlineBlock">
+        display: inline-block
+      </md-radio-button>
+    </md-radio-group>
+  </div>
+
+  <div class="box-2">
+    <h4>Element Width</h4>
+    <div>
+      <md-slider
+        #slider
+        (change)="onValueChange($event.value)"
+        [disabled]="elDisplay === Display.Inline">
+      </md-slider>
+    </div>
+    <div>
+      <button
+        (click)="slider.value = 0; elWidth = null"
+        md-raised-button>
+        Reset Slider
+      </button>
+    </div>
+    <div
+      [style.visibility]="!slider.value ? 'hidden' : null">
+        Width: {{ slider.value }}px
+    </div>
+  </div>
+
+  <div class="box-3">
+    <button
+      (click)="addElement()"
+      color="accent"
+      md-raised-button>
+        Add Element
+    </button>
+    <button
+      (click)="elements = []"
+      color="accent"
+      md-raised-button>
+        Clear Elements
+    </button>
+  </div>
+</div>
+
+<div class="dom-container mt-1">
+  <ng-container
+    *ngFor="let el of elements"
+    [ngSwitch]="el.display">
+      <div
+        *ngSwitchCase="Display.Block"
+        class="element block"
+        [style.width]="el.width">
+          block
+      </div>
+      <div
+        *ngSwitchCase="Display.Inline"
+        class="element inline"
+        [style.width]="el.width">
+          inline
+      </div>
+      <div
+        *ngSwitchCase="Display.InlineBlock"
+        class="element inline-block"
+        [style.width]="el.width">
+          inline-block
+      </div>
+  </ng-container>
+</div>

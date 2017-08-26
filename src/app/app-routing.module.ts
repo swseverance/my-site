@@ -3,8 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'element-stacking',
+    loadChildren: './element-stacking/element-stacking.module#ElementStackingModule'
+  },
+  {
     path: '',
-    children: []
+    pathMatch: 'full',
+    redirectTo: 'element-stacking'
   }
 ];
 

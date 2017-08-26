@@ -1,3 +1,20 @@
-<ss-navbar></ss-navbar>
+<md-toolbar color="primary">
+  <button type="button" md-button (click)="sidenav.toggle()">
+    <md-icon color="accent">reorder</md-icon>
+  </button>
+  <div class="container">
+    <span>Samuel Severance</span>
+  </div>
+</md-toolbar>
 
-<router-outlet></router-outlet>
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="push">
+    <md-list dense>
+      <a md-line routerLink="/test">Go here</a>
+    </md-list>
+  </md-sidenav>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~normalize-css/normalize.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*,
+*::after,
+*::before
+  box-sizing: border-box
+
+body
+  background-color #fafafa
+
+.dom-container
+  border 1px solid rgba(0, 0, 0, 0.50)
+  min-height 100px
+  overflow scroll
+
+.col-to-row
+  display flex
+  flex-direction column
+  flex-wrap wrap
+
+@media screen and (min-width: 600px)
+  .col-to-row
+    align-items stretch
+    flex-direction row
+
+.mt-1
+  margin-top 1em
