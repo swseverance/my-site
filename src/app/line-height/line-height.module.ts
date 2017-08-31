@@ -4,12 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
-import { ElementStackingComponent } from './element-stacking/element-stacking.component';
+import { SharedModule } from '../shared/shared.module';
+import { LineHeightComponent } from './line-height/line-height.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ElementStackingComponent
+    component: LineHeightComponent
   }
 ];
 
@@ -17,12 +18,11 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   declarations: [
-    ElementStackingComponent
+    LineHeightComponent
   ]
 })
-export class ElementStackingModule { }
+export class LineHeightModule { }

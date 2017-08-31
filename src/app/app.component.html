@@ -9,8 +9,9 @@
 
 <md-sidenav-container>
   <md-sidenav #sidenav mode="push">
-    <md-list dense>
-      <a md-line routerLink="/test">Go here</a>
+    <md-list dense (click)="sidenav.toggle()">
+      <a md-list-item routerLink="element-stacking">Element Stacking</a>
+      <a md-list-item routerLink="line-height">Line Height</a>
     </md-list>
   </md-sidenav>
 
@@ -18,3 +19,4 @@
     <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>
+

@@ -1,0 +1,58 @@
+<md-card>
+  <md-card-title>LINE HEIGHT</md-card-title>
+  <md-card-content>The line-height property (in CSS) is sets the distance between lines of text</md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-content>
+    Use the slider to adjust the line-height of the text content and observe
+    how the space between lines of text grows larger as line-height increases.
+  </md-card-content>
+  <md-card-actions>
+    <md-slider
+      #slider
+      value="20">
+    </md-slider>
+    <span class="ml-1">line-height: {{ slider.value }}px</span>
+  </md-card-actions>
+  <md-card-content>
+    <div [ngStyle]="{'line-height.px': slider.value}">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a risus
+      ullamcorper, facilisis massa condimentum, rutrum leo. Morbi quam felis,
+      faucibus quis arcu ac, viverra mollis dui. Curabitur nec bibendum dui.
+      Aenean dolor nibh, aliquet vel magna hendrerit, feugiat vestibulum
+      turpis. Nulla ac metus et velit consequat venenatis vitae in eros. Donec
+      molestie elit at nunc laoreet suscipit. Phasellus in fermentum tellus, a
+      finibus orci. Quisque vitae orci nisi. Aliquam pretium imperdiet nunc id viverra.
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>Other uses</md-card-title>
+  <md-card-content>
+    <p>
+      For an element of fixed height that contains a single line of text, setting
+      the element's line-height equal to its height has the effect of vertically
+      centering the text within the element.
+    </p>
+    <ss-code-sample class="html">
+      &lt;div class="vertically-centered-text"&gt;
+        Vertically Centered Text
+      &lt;/div&gt;
+    </ss-code-sample>
+    <ss-code-sample class="css">
+      .vertically-centered-text &#123;
+        border: 1px solid blue;
+        border-radius: 5px;
+        display: inline-block;
+        height: 96px;
+        line-height: 96px;
+        padding: 0 1rem;
+      &#125;
+    </ss-code-sample>
+    <div class="vertically-centered-text">
+      Vertically Centered Text
+    </div>
+  </md-card-content>
+</md-card>

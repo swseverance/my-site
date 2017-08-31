@@ -56,7 +56,6 @@
   "defaults": {
     "styleExt": "styl",
     "component": {
-      "changeDetection": "OnPush"
     }
   }
 }
