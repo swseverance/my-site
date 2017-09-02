@@ -4,8 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { TextShadowComponent } from './text-shadow/text-shadow.component';
 
-const routes: Routes = [ ];
+const routes: Routes = [
+  {
+    path: '',
+    component: TextShadowComponent
+  }
+];
 
 @NgModule({
   imports: [
@@ -14,6 +20,6 @@ const routes: Routes = [ ];
     MaterialModule,
     SharedModule
   ],
-  declarations: []
+  declarations: [TextShadowComponent]
 })
 export class TextShadowModule { }

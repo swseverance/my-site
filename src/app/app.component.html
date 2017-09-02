@@ -10,8 +10,12 @@
 <md-sidenav-container>
   <md-sidenav #sidenav mode="push">
     <md-list dense (click)="sidenav.toggle()">
-      <a md-list-item routerLink="element-stacking">Element Stacking</a>
-      <a md-list-item routerLink="line-height">Line Height</a>
+      <a
+        *ngFor="let link of links"
+        [routerLink]="link.href"
+        md-list-item>
+          {{ link.textContent }}
+      </a>
     </md-list>
   </md-sidenav>
 

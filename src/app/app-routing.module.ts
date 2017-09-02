@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: './line-height/line-height.module#LineHeightModule'
   },
   {
+    path: 'text-shadow',
+    loadChildren: './text-shadow/text-shadow.module#TextShadowModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: '/element-stacking'

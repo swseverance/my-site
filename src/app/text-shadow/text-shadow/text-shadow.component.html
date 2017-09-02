@@ -1,0 +1,38 @@
+<md-card>
+  <md-card-title>TEXT SHADOW</md-card-title>
+  <md-card-content>
+    <p>The text shadow property accepts four arguments:</p>
+    <md-list dense>
+      <md-list-item>
+        1. Horizontal offset of the shadow (positive or negative number)
+      </md-list-item>
+      <md-list-item>
+        2. Vertical offset of the shadow (positive or negative number)
+      </md-list-item>
+      <md-list-item>
+        3. Blur radius (The larger the value the blurrier the shadow becomes)
+      </md-list-item>
+      <md-list-item>
+        4. Color (hexadecimal, rgb, rgba, etc.)
+      </md-list-item>
+    </md-list>
+    <p>
+      Multiple text shadows can be applied to the same element by using
+      comma separated values. Check out this fun example:
+    </p>
+    <ss-code-sample class="css">
+      .miami &#123;
+        color: white;
+        font-size: 96px;
+        text-shadow: 3px 0 4px orange, 0 3px 4px magenta, -3px 0 4px lime, 0 -3px 4px magenta;
+      &#125;
+    </ss-code-sample>
+    <h1 class="container miami">
+      <span>M</span>
+      <span>I</span>
+      <span>A</span>
+      <span>M</span>
+      <span>I</span>
+    </h1>
+  </md-card-content>
+</md-card>
