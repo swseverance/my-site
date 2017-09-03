@@ -13,6 +13,8 @@
       <a
         *ngFor="let link of links"
         [routerLink]="link.href"
+        class="nav-link"
+        routerLinkActive="active"
         md-list-item>
           {{ link.textContent }}
       </a>

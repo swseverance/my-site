@@ -1,8 +1,20 @@
+@import 'variables'
+
 .content
   margin 0 5%
   padding-top 1rem
 
-.mat-sidenav a
+.nav-link
+  color black
   display block
+  font-weight 500
   margin 1rem
   text-decoration none
+  text-transform uppercase
+  transition: color 0.2s ease;
+
+  &:hover
+    color $ss-mat-accent !important
+
+  &.active
+    color $ss-mat-primary
