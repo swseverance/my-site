@@ -1,0 +1,46 @@
+@import 'variables'
+
+a {
+  border: 1px solid black;
+  border-radius: 10px;
+  color: #3f51b5;
+  display: block;
+  font-size: 24px;
+  padding: 1em;
+  text-decoration: none;
+}
+
+a::after {
+  color: #ff4081;
+  cursor: default;
+  margin-left: 1em;
+}
+
+a:link::after {
+  content: ":link";
+}
+
+a:link:hover::after {
+  content: ":link, :hover";
+}
+
+a:link:hover:active:focus::after {
+  content: ":link, :hover, :active, :focus";
+}
+
+a:link:hover:focus::after {
+  content: ":link, :hover, :focus";
+}
+
+a:link:focus::after {
+  content: ":link, :focus";
+}
+
+a:hover {
+  color: rgba(63, 81, 181, 0.7);
+}
+
+a:active,
+a:focus {
+  color: #2db34a;
+}

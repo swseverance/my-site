@@ -19,5 +19,9 @@ export class AppComponent {
       href: 'text-shadow',
       textContent: 'Text Shadow'
     },
+    {
+      href: 'pseudo-classes',
+      textContent: 'Pseudo-Classes'
+    },
   ];
 }

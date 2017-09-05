@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: './text-shadow/text-shadow.module#TextShadowModule'
   },
   {
+    path: 'pseudo-classes',
+    loadChildren: './pseudo-classes/pseudo-classes.module#PseudoClassesModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: '/element-stacking'

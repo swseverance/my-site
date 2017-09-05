@@ -1,0 +1,71 @@
+<md-card id="top">
+  <md-card-title>PSEUDO-CLASSES</md-card-title>
+  <md-card-content>
+    <p>
+      The motivation behind this exercise was to get some clarity on exactly when
+      the <strong>:hover</strong>, <strong>:link</strong>, <strong>:focus</strong>,
+      and <strong>:active</strong> pseudo-classes are applied to anchor elements
+      when using a web app.
+    </p>
+    <p>
+      I've found the following to be true in Google Chrome on a desktop. Different
+      browsers and devices may yield different results:
+    </p>
+    <ol>
+      <li>
+        <strong>:link</strong> pseudo-class is applied to all anchor elements that have an href attribute
+        and value. Hovering over a link or clicking a link does not cause the <strong>:link</strong> pseudo-class
+        to be removed.
+      </li>
+      <li>
+        <strong>:hover</strong> pseudo-class is applied when a user hovers over a link, as continues to stay
+        applied while the user clicks the link.
+      </li>
+      <li>
+        <strong>:active</strong> pseudo-classes is applied only when the user has clicked the link, and has not yet
+        released their click.
+      </li>
+      <li>
+        <strong>:focus</strong> pseudo-classes is applied when the user clicks a link. It remains until the user
+        clicks outside of the link or gives focus to another element.
+      </li>
+    </ol>
+    <a routerLink="./dummy">CHECK ME OUT</a>
+    <p>
+      The link above routes to a dummy component. Next to the link you'll find each pseudo-class
+      that's applied to the link at any given time. Observe that the <strong>:link</strong> pseudo-class
+      is applied at all times. Hover over the link, to observe that the <strong>:link</strong> and <strong>:hover</strong>
+      pseudo-classes are applied at the same time. Also try clicking and holding down to observe
+      that the <strong>:link</strong>, <strong>:hover</strong>, <strong>:active</strong>, and <strong>:focus</strong>
+      classes are all applied simultaneously! Release the mouse and watch the <strong>:active</strong>
+      pseudo-class disappear. Move your cursor outside of the link to watch <strong>:hover</strong> disappear.
+      Click the body of the document to see the <strong>:focus</strong> pseudo-class dropped as well.
+    </p>
+    <p>
+      The pseudo-classes applied to the link at any given time a rendered entirely using CSS:
+    </p>
+    <ss-code-sample class="css">
+      a:link::after &#123;
+        content: ":link";
+      &#125;
+
+      a:link:hover::after &#123;
+        content: ":link, :hover";
+      &#125;
+
+      a:link:hover:active:focus::after &#123;
+        content: ":link, :hover, :active, :focus";
+      &#125;
+
+      a:link:hover:focus::after &#123;
+        content: ":link, :hover, :focus";
+      &#125;
+
+      a:link:focus::after &#123;
+        content: ":link, :focus";
+      &#125;
+    </ss-code-sample>
+  </md-card-content>
+</md-card>
+
+<router-outlet></router-outlet>
