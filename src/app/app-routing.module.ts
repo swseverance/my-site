@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: './pseudo-classes/pseudo-classes.module#PseudoClassesModule'
   },
   {
+    path: 'box-shadow',
+    loadChildren: './box-shadow/box-shadow.module#BoxShadowModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: '/element-stacking'

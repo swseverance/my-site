@@ -23,5 +23,9 @@ export class AppComponent {
       href: 'pseudo-classes',
       textContent: 'Pseudo-Classes'
     },
+    {
+      href: 'box-shadow',
+      textContent: 'Box Shadow'
+    },
   ];
 }

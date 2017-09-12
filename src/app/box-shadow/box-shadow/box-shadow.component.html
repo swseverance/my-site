@@ -1,0 +1,40 @@
+<md-card>
+  <md-card-title>BOX SHADOW</md-card-title>
+  <md-card-content>
+    <p>
+      The objective of this demonstration was to show how CSS' box-shadow property
+      could be used in conjunction with animations to achieve a nice "hover" affect
+      when a user hovers over a button.
+    </p>
+    <div class="btn-container">
+      <button type="button" class="slick-btn btn-one">
+        button one
+      </button>
+      <button type="button" class="slick-btn btn-two">
+        button two
+      </button>
+      <button type="button" class="slick-btn btn-three">
+        button three
+      </button>
+    </div>
+    <ss-code-sample class="css">
+      .slick-btn &#123;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        font-size: 22px;
+        font-weight: 300;
+        padding: 0.25em 0;
+        position: relative;
+        text-align: center;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+        width: 200px;
+      &#125;
+
+      .slick-btn:hover &#123;
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+      &#125;
+    </ss-code-sample>
+  </md-card-content>
+</md-card>
