@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
 import { ElementStackingComponent } from './element-stacking/element-stacking.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   declarations: [
     ElementStackingComponent
