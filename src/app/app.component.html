@@ -1,28 +1,28 @@
-<md-toolbar color="primary">
-  <button type="button" md-button (click)="sidenav.toggle()">
-    <md-icon color="accent">reorder</md-icon>
+<mat-toolbar color="primary">
+  <button type="button" mat-button (click)="sidenav.toggle()">
+    <mat-icon color="accent">reorder</mat-icon>
   </button>
   <div class="container">
     <span>Samuel Severance</span>
   </div>
-</md-toolbar>
+</mat-toolbar>
 
-<md-sidenav-container>
-  <md-sidenav #sidenav mode="push">
-    <md-list dense (click)="sidenav.toggle()">
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="push">
+    <mat-nav-list dense (click)="sidenav.toggle()">
       <a
         *ngFor="let link of links"
         [routerLink]="link.href"
         class="nav-link"
         routerLinkActive="active"
-        md-list-item>
+        mat-list-item>
           {{ link.textContent }}
       </a>
-    </md-list>
-  </md-sidenav>
+    </mat-nav-list>
+  </mat-sidenav>
 
   <div class="content">
     <router-outlet></router-outlet>
   </div>
-</md-sidenav-container>
+</mat-sidenav-container>
 

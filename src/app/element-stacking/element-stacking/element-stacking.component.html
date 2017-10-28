@@ -1,9 +1,9 @@
-<md-card>
-  <md-card-title>
+<mat-card>
+  <mat-card-title>
     ELEMENT STACKING
     <ss-date>8/26/17</ss-date>
-  </md-card-title>
-  <md-card-content>
+  </mat-card-title>
+  <mat-card-content>
     <p>
       This tool was designed to illustrate the stacking behavior of DOM elements
       with display values of <em>block, inline, and inline-block</em>. For
@@ -13,32 +13,32 @@
     <div class="mt-1 col-to-row">
       <div class="box-1">
         <h4>Element Display</h4>
-        <md-radio-group [(ngModel)]="elDisplay">
-          <md-radio-button [value]="Display.Block">
+        <mat-radio-group [(ngModel)]="elDisplay">
+          <mat-radio-button [value]="Display.Block">
             display: block
-          </md-radio-button>
-          <md-radio-button [value]="Display.Inline">
+          </mat-radio-button>
+          <mat-radio-button [value]="Display.Inline">
             display: inline
-          </md-radio-button>
-          <md-radio-button [value]="Display.InlineBlock">
+          </mat-radio-button>
+          <mat-radio-button [value]="Display.InlineBlock">
             display: inline-block
-          </md-radio-button>
-        </md-radio-group>
+          </mat-radio-button>
+        </mat-radio-group>
       </div>
 
       <div class="box-2">
         <h4>Element Width</h4>
         <div>
-          <md-slider
+          <mat-slider
             #slider
             (change)="onValueChange($event.value)"
             [disabled]="elDisplay === Display.Inline">
-          </md-slider>
+          </mat-slider>
         </div>
         <div>
           <button
             (click)="slider.value = 0; elWidth = null"
-            md-raised-button>
+            mat-raised-button>
             Reset Slider
           </button>
         </div>
@@ -52,13 +52,13 @@
         <button
           (click)="addElement()"
           color="accent"
-          md-raised-button>
+          mat-raised-button>
             Add Element
         </button>
         <button
           (click)="elements = []"
           color="accent"
-          md-raised-button>
+          mat-raised-button>
             Clear Elements
         </button>
       </div>
@@ -88,5 +88,5 @@
           </div>
       </ng-container>
     </div>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>

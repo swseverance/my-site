@@ -1,24 +1,24 @@
-<md-card>
-  <md-card-title>
+<mat-card>
+  <mat-card-title>
     LINE HEIGHT
     <ss-date>8/31/17</ss-date>
-  </md-card-title>
-  <md-card-content>The line-height property (in CSS) sets the distance between lines of text</md-card-content>
-</md-card>
+  </mat-card-title>
+  <mat-card-content>The line-height property (in CSS) sets the distance between lines of text</mat-card-content>
+</mat-card>
 
-<md-card>
-  <md-card-content>
+<mat-card>
+  <mat-card-content>
     Use the slider to adjust the line-height of the text content and observe
     how the space between lines of text grows larger as line-height increases.
-  </md-card-content>
-  <md-card-actions>
-    <md-slider
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-slider
       #slider
       value="20">
-    </md-slider>
+    </mat-slider>
     <span class="ml-1">line-height: {{ slider.value }}px</span>
-  </md-card-actions>
-  <md-card-content>
+  </mat-card-actions>
+  <mat-card-content>
     <div [ngStyle]="{'line-height.px': slider.value}">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a risus
       ullamcorper, facilisis massa condimentum, rutrum leo. Morbi quam felis,
@@ -28,12 +28,12 @@
       molestie elit at nunc laoreet suscipit. Phasellus in fermentum tellus, a
       finibus orci. Quisque vitae orci nisi. Aliquam pretium imperdiet nunc id viverra.
     </div>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>
 
-<md-card>
-  <md-card-title>Other uses</md-card-title>
-  <md-card-content>
+<mat-card>
+  <mat-card-title>Other uses</mat-card-title>
+  <mat-card-content>
     <p>
       For an element of fixed height that contains a single line of text, setting
       the element's line-height equal to its height has the effect of vertically
@@ -57,5 +57,5 @@
     <div class="vertically-centered-text">
       Vertically Centered Text
     </div>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>
