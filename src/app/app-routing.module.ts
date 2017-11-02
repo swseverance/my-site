@@ -25,9 +25,13 @@ const routes: Routes = [
     loadChildren: './box-shadow/box-shadow.module#BoxShadowModule'
   },
   {
+    path: 'binary-tree-inversion',
+    loadChildren: './binary-tree-inversion/binary-tree-inversion.module#BinaryTreeInversionModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/element-stacking'
+    redirectTo: '/binary-tree-inversion'
   },
   {
     path: '**',

@@ -1,0 +1,45 @@
+/* border-box */
+
+*,
+*::after,
+*::before
+  box-sizing: border-box
+
+/* clearfix */
+
+.clear-fix:after
+  content: "";
+  display: table;
+  clear: both;
+
+body
+  background-color #fafafa
+  font-family Roboto, Arial, Helvetica, sans-serif
+  line-height 1.5
+
+.dom-container
+  border 1px solid rgba(0, 0, 0, 0.50)
+  min-height 100px
+  overflow scroll
+
+.col-to-row
+  display flex
+  flex-direction column
+  flex-wrap wrap
+
+@media screen and (min-width: 600px)
+  .col-to-row
+    align-items stretch
+    flex-direction row
+
+.title
+  margin-right 0.5em
+
+.mt-1
+  margin-top 1rem
+.mb-1
+  margin-bottom 1rem
+.ml-1
+  margin-left 1rem
+.mr-1
+  margin-right 1rem

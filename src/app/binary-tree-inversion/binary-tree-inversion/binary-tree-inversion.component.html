@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-title>
+    <span class="title">BINARY TREE INVERSION</span>
+    <ss-date>11/2/17</ss-date>
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      Creating a function to invert a binary tree is a great whiteboarding exercise. This
+      model demonstrates how a binary tree can be inverted by creating a binary tree with
+      arbitrary values, inverting the tree, and highlighting each node after its left and
+      right children are swapped.
+    </p>
+    <button
+      (click)="onClick()"
+      color="accent"
+      [disabled]="buttonDisabled$ | async"
+      mat-raised-button>
+        Invert!
+    </button>
+    <h3>Inverted Tree</h3>
+    <ss-binary-tree
+      [binaryTreeState]="state$ | async">
+    </ss-binary-tree>
+
+    <h3>Original Tree</h3>
+    <ss-binary-tree
+      [binaryTreeState]="initialState$ | async">
+    </ss-binary-tree>
+
+    <p>
+      The code to recursively invert a binary tree is surprisingly simple
+      and elegant.
+    </p>
+    <ss-code-sample class="javascript">
+      const invertBinaryTree = (node: Node): Node => &#123;
+        if (node) &#123;
+          const invertedLeftSubTree = invertBinaryTree(node.left);
+          const invertedRightSubTree = invertBinaryTree(node.right);
+
+          node.left = invertedRightSubTree;
+          node.right = invertedLeftSubTree;
+        &#125;
+
+        return node;
+      &#125;
+    </ss-code-sample>
+  </mat-card-content>
+</mat-card>

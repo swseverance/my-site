@@ -27,5 +27,9 @@ export class AppComponent {
       href: 'box-shadow',
       textContent: 'Box Shadow'
     },
+    {
+      href: 'binary-tree-inversion',
+      textContent: 'Binary Tree Inversion'
+    },
   ];
 }

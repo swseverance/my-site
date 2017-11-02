@@ -1,0 +1,7 @@
+<ul class="clear-fix">
+  <li *ngFor="let node of binaryTreeState" [style.width]="100 * Math.pow(2, -1 * node.level) + '%'">
+    <div class="node" [class.inverted]="node.inverted">
+      <span>{{ node.value }}</span>
+    </div>
+  </li>
+</ul>
