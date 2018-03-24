@@ -67,7 +67,7 @@ describe('BinaryTreeInversionService', () => {
   });
 
   describe('invertBinaryTree()', () => {
-    it("inverts a binary tree, invoking a callback after inverting a node's children", () => {
+    it('inverts a binary tree, invoking a callback after inverting a node\'s children', () => {
       const arr = [1, 2, 3, 4, 5, 6, 7];
       const root = treeFromArray(arr);
       let callbackFnCallCount = 0;
