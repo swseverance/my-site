@@ -22,4 +22,4 @@ const routes: Routes = [
   ],
   declarations: [BoxShadowComponent]
 })
-export class BoxShadowModule { }
+export class BoxShadowModule {}

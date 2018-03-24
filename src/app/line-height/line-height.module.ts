@@ -21,8 +21,6 @@ const routes: Routes = [
     MaterialModule,
     SharedModule
   ],
-  declarations: [
-    LineHeightComponent
-  ]
+  declarations: [LineHeightComponent]
 })
-export class LineHeightModule { }
+export class LineHeightModule {}

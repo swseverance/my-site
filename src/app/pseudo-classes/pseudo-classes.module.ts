@@ -29,4 +29,4 @@ const routes: Routes = [
   ],
   declarations: [PseudoClassesComponent, DummyComponent]
 })
-export class PseudoClassesModule { }
+export class PseudoClassesModule {}

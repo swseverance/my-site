@@ -9,7 +9,7 @@ import {
   MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatToolbarModule,
+  MatToolbarModule
 } from '@angular/material';
 
 @NgModule({
@@ -23,7 +23,7 @@ import {
     MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatToolbarModule,
+    MatToolbarModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

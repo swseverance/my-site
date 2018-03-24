@@ -22,4 +22,4 @@ const routes: Routes = [
   ],
   declarations: [TextShadowComponent]
 })
-export class TextShadowModule { }
+export class TextShadowModule {}

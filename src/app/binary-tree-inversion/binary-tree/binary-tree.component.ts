@@ -11,5 +11,7 @@ import { BinaryTreeState } from '../models';
 export class BinaryTreeComponent {
   @Input() binaryTreeState: BinaryTreeState = [];
 
-  get Math () { return Math; }
+  get Math() {
+    return Math;
+  }
 }

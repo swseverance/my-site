@@ -1,7 +1,10 @@
 import {
-  indexOfFirstNonWhitespaceCharacter, indexOfLastNonWhitespaceCharacter,
-  removeLeadingNewlineCharacters, removeTrailingNewlineCharacters,
-  formatter } from './utils';
+  indexOfFirstNonWhitespaceCharacter,
+  indexOfLastNonWhitespaceCharacter,
+  removeLeadingNewlineCharacters,
+  removeTrailingNewlineCharacters,
+  formatter
+} from './utils';
 
 /**
  * TODO - firm up these unit tests a bit

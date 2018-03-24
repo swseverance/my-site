@@ -6,7 +6,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   {
     path: 'element-stacking',
-    loadChildren: './element-stacking/element-stacking.module#ElementStackingModule'
+    loadChildren:
+      './element-stacking/element-stacking.module#ElementStackingModule'
   },
   {
     path: 'line-height',
@@ -26,7 +27,8 @@ const routes: Routes = [
   },
   {
     path: 'binary-tree-inversion',
-    loadChildren: './binary-tree-inversion/binary-tree-inversion.module#BinaryTreeInversionModule'
+    loadChildren:
+      './binary-tree-inversion/binary-tree-inversion.module#BinaryTreeInversionModule'
   },
   {
     path: '',
@@ -43,4 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -22,12 +22,7 @@ const routes: Routes = [
     MaterialModule,
     SharedModule
   ],
-  providers: [
-    BinaryTreeInversionService
-  ],
-  declarations: [
-    BinaryTreeInversionComponent,
-    BinaryTreeComponent
-  ]
+  providers: [BinaryTreeInversionService],
+  declarations: [BinaryTreeInversionComponent, BinaryTreeComponent]
 })
-export class BinaryTreeInversionModule { }
+export class BinaryTreeInversionModule {}

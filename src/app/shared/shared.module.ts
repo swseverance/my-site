@@ -5,16 +5,8 @@ import { CodeSampleComponent } from './code-sample/code-sample.component';
 import { DateComponent } from './date/date.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    CodeSampleComponent,
-    DateComponent
-  ],
-  exports: [
-    CodeSampleComponent,
-    DateComponent
-  ]
+  imports: [CommonModule],
+  declarations: [CodeSampleComponent, DateComponent],
+  exports: [CodeSampleComponent, DateComponent]
 })
-export class SharedModule { }
+export class SharedModule {}

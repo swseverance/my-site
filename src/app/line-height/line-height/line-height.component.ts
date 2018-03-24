@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './line-height.component.html',
   styleUrls: ['./line-height.component.styl']
 })
-export class LineHeightComponent { }
+export class LineHeightComponent {}

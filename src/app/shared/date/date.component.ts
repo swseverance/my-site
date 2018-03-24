@@ -5,4 +5,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './date.component.html',
   styleUrls: ['./date.component.styl']
 })
-export class DateComponent { }
+export class DateComponent {}

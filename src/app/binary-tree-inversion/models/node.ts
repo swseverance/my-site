@@ -4,5 +4,5 @@ export class Node {
   public right: Node = null;
   public inverted = false;
 
-  constructor (public level: number) { }
+  constructor(public level: number) {}
 }

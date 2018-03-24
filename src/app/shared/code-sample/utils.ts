@@ -14,7 +14,15 @@ export const indexOfLastNonWhitespaceCharacter = (str: string): number => {
   let index: number;
 
   try {
-    index = str.length - 1 - /\S/gi.exec(str.split('').reverse().join('')).index;
+    index =
+      str.length -
+      1 -
+      /\S/gi.exec(
+        str
+          .split('')
+          .reverse()
+          .join('')
+      ).index;
   } catch (e) {
     index = str.length - 1;
   }
@@ -48,5 +56,9 @@ export const formatter = (str: string): string => {
   str = removeTrailingNewlineCharacters(str);
   const padding = indexOfFirstNonWhitespaceCharacter(str);
 
-  return str.split('\n').map(s => s.slice(padding)).join('\n').trim();
+  return str
+    .split('\n')
+    .map(s => s.slice(padding))
+    .join('\n')
+    .trim();
 };

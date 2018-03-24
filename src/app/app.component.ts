@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-  links: Array<{ href: string, textContent: string}> = [
+  links: Array<{ href: string; textContent: string }> = [
     {
       href: 'element-stacking',
       textContent: 'Element Stacking'
@@ -30,6 +30,6 @@ export class AppComponent {
     {
       href: 'binary-tree-inversion',
       textContent: 'Binary Tree Inversion'
-    },
+    }
   ];
 }

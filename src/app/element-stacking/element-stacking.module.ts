@@ -23,8 +23,6 @@ const routes: Routes = [
     MaterialModule,
     SharedModule
   ],
-  declarations: [
-    ElementStackingComponent
-  ]
+  declarations: [ElementStackingComponent]
 })
-export class ElementStackingModule { }
+export class ElementStackingModule {}

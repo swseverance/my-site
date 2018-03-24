@@ -10,12 +10,14 @@ import { BinaryTreeState, Node } from './models';
  * each node's `value` property is null
  */
 export const createTree = (numNodes: number): Node => {
-  if (!numNodes) { return null; }
+  if (!numNodes) {
+    return null;
+  }
 
   const root = new Node(0);
 
   let numCreated = 1;
-  let currentLevel = [ root ];
+  let currentLevel = [root];
   let nextLevel = [];
 
   while (true) {
@@ -45,9 +47,11 @@ export const createTree = (numNodes: number): Node => {
 };
 
 export const breadthFirstTraversal = (node: Node, callbackFn: Function) => {
-  if (!node) { return; }
+  if (!node) {
+    return;
+  }
 
-  const queue = [ node ];
+  const queue = [node];
 
   while (queue.length) {
     const currentNode = queue.shift();
@@ -113,9 +117,7 @@ export const treeToArray = (root: Node): BinaryTreeState => {
 };
 
 const createArr = () => {
-  return new Array(15)
-    .fill(1)
-    .map(() => Math.floor(100 * Math.random()));
+  return new Array(15).fill(1).map(() => Math.floor(100 * Math.random()));
 };
 
 const createTreeStates = (): BinaryTreeState[] => {
@@ -130,7 +132,7 @@ const createTreeStates = (): BinaryTreeState[] => {
     initialState.push({ value, inverted, level });
   });
 
-  const binaryTreeStates = [ initialState ];
+  const binaryTreeStates = [initialState];
 
   const callbackFn = () => {
     binaryTreeStates.push(treeToArray(tree));
@@ -167,7 +169,7 @@ export class BinaryTreeInversionService {
    *    the changes)
    * 5) buttonDisabled$ emits false to enable the button
    */
-  public getTreeStates () {
+  public getTreeStates() {
     /**
      * disable the button to prevent the user from clicking
      * multiple times
@@ -178,7 +180,7 @@ export class BinaryTreeInversionService {
       this.state = createTreeStates();
     }
 
-    const [ initialState ] = this.state;
+    const [initialState] = this.state;
 
     /**
      * emit the initial state for the initialState$ observable
@@ -196,11 +198,10 @@ export class BinaryTreeInversionService {
       ...this.state.map((value, index) => {
         return Observable.of(value).delay(1000 * index);
       })
-    )
-    .subscribe({ next, complete });
+    ).subscribe({ next, complete });
   }
 
-  public resetState () {
+  public resetState() {
     this.subscription.unsubscribe();
     this.state = null;
   }

@@ -1,4 +1,11 @@
-import { Component, Input, ViewChild, AfterViewInit, OnChanges, ElementRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  AfterViewInit,
+  OnChanges,
+  ElementRef
+} from '@angular/core';
 
 import * as hljs from 'highlight.js';
 
@@ -14,7 +21,7 @@ export class CodeSampleComponent implements AfterViewInit {
 
   @ViewChild('needsHighlight') needsHighlight: ElementRef;
 
-  ngAfterViewInit () {
+  ngAfterViewInit() {
     const codeSample = this.needsHighlight.nativeElement.textContent;
 
     setTimeout(() => {

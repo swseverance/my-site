@@ -15,15 +15,17 @@ export class BinaryTreeInversionComponent implements OnInit, OnDestroy {
   public state$: Observable<BinaryTreeState>;
   public buttonDisabled$: Observable<boolean>;
 
-  constructor (public service: BinaryTreeInversionService) { }
+  constructor(public service: BinaryTreeInversionService) {}
 
-  get Math () { return Math; }
+  get Math() {
+    return Math;
+  }
 
-  onClick () {
+  onClick() {
     this.service.getTreeStates();
   }
 
-  ngOnInit () {
+  ngOnInit() {
     this.initialState$ = this.service.initialState$;
     this.state$ = this.service.state$;
     this.buttonDisabled$ = this.service.buttonDisabled$;
@@ -31,7 +33,7 @@ export class BinaryTreeInversionComponent implements OnInit, OnDestroy {
     this.service.getTreeStates();
   }
 
-  ngOnDestroy () {
+  ngOnDestroy() {
     this.service.resetState();
   }
 }

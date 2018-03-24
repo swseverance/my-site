@@ -22,13 +22,15 @@ export class ElementStackingComponent {
 
   elements: Element[] = [];
 
-  get Display () { return Display; }
+  get Display() {
+    return Display;
+  }
 
-  onValueChange (value: number) {
+  onValueChange(value: number) {
     this.elWidth = value;
   }
 
-  addElement () {
+  addElement() {
     if (this.elWidth && this.elDisplay !== Display.Inline) {
       this.elements.push({
         display: this.elDisplay,
