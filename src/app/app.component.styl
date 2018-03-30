@@ -1,8 +1,15 @@
 @import 'variables'
 
-.content
-  margin 0 5%
-  padding-top 1rem
+:host
+  min-height 100vh
+  display flex
+  flex-direction column
+
+.name
+  padding-left .5em
+
+mat-sidenav-container
+  flex-grow 1
 
 .nav-link
   color black
@@ -19,3 +26,7 @@
 
   &.active
     color $ss-mat-primary
+
+.content
+  margin 0 5%
+  padding-top 1rem
