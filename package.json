@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "deploy": "npm run test && npm run build && firebase login && firebase deploy",
-    "build": "ng build --prod",
+    "build": "ng build --aot --env=prod --prod",
     "test": "ng test --single-run",
     "test:watch": "ng test",
     "lint": "ng lint",
