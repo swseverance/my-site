@@ -31,9 +31,14 @@ const routes: Routes = [
       './binary-tree-inversion/binary-tree-inversion.module#BinaryTreeInversionModule'
   },
   {
+    path: 'mat-button',
+    loadChildren:
+      './mat-button/mat-button.module#MatButtonModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/binary-tree-inversion'
+    redirectTo: '/mat-button'
   },
   {
     path: '**',

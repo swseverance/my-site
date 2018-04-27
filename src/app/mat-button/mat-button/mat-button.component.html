@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-title>
+    <span class="title">Material Design Button</span>
+    <ss-date>4/26/18</ss-date>
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      Angular Material's buttons look fantastic. You can see how
+      clicking a button causes a bounce-like effect, while a circular ripple
+      originates from where the user clicked.
+    </p>
+    <img src="/assets/mat-button.gif" alt="a gif of a material design button">
+    <p>
+      Drawing on Angular Material's source code as inspiration, I aimed to replicate
+      the behavior of the buttons, using a minimal implementation that still demonstrates
+      how the buttons actually work.
+    </p>
+    <button type="button" material-design-button>
+      Click Me
+    </button>
+  </mat-card-content>
+
+  <mat-card-title>How It Works</mat-card-title>
+  <mat-card-content>
+    <p>
+      The key idea behind achieving the ripple effect is that, when a user clicks the
+      button a "ripple" element is added to the DOM. The element
+      receives a "ripple" class, which provides the following main styles:
+    </p>
+    <ss-code-sample class="stylus">
+      .ripple
+        border-radius 50%
+        position absolute
+        transform scale(0)
+        top 0px
+        left 0px
+        transition all .4s cubic-bezier(.25,.8,.25,1)
+        z-index -1
+        background hsla(196, 89%, 50%, 0.41)
+    </ss-code-sample>
+    <p>
+      The ripple is initially given a scale of zero, rendering it invisible. A style
+      recalculation of the element is forced, and then its scale is set to 1. Over
+      a period of .4s the ripple transitions from scale(0) to scale(1) (its full size),
+      resulting in the growing ripple effect. When the transitionend event fires (meaning
+      the element has grown to its full size) it is then removed from the DOM.
+    </p>
+    <a href="https://github.com/swseverance/my-site/tree/master/src/app/mat-button/material-design-button/material-design-button.component.ts">
+      Check out the code here
+    </a>
+  </mat-card-content>
+</mat-card>
+

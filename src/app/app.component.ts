@@ -30,6 +30,10 @@ export class AppComponent {
     {
       href: 'binary-tree-inversion',
       textContent: 'Binary Tree Inversion'
+    },
+    {
+      href: 'mat-button',
+      textContent: 'Material Design Button'
     }
   ];
 }
